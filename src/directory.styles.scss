@@ -1,0 +1,13 @@
+.directory {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+@media (max-width: 859px) 
+{
+  .directory 
+   {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, 1fr));
+   }
+}
