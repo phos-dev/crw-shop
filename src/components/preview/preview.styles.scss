@@ -1,0 +1,13 @@
+.itemPreview {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    & h1 {
+        justify-items: left;
+    }
+    & .items-list {
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+    }
+}

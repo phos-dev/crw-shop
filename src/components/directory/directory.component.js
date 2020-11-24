@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MenuItem from './MenuItem';
+import MenuItem from '../item/MenuItem';
 import './directory.styles.scss';
 class Directory extends Component {
     constructor() {
@@ -23,20 +23,22 @@ class Directory extends Component {
         {
             id: 4,
             title: 'ESPORTIVOS',
-            background: 'https://images3.alphacoders.com/100/1003359.jpg'
+            background: 'https://images3.alphacoders.com/100/1003359.jpg',
+            size: 'large'
         },
         {
             id: 5,
             title: 'DIGITAIS',
-            background: 'https://cdn.hiconsumption.com/wp-content/uploads/2020/06/Best-Digital-Watches-0-Hero.jpg'
+            background: 'https://cdn.hiconsumption.com/wp-content/uploads/2020/06/Best-Digital-Watches-0-Hero.jpg',
+            size: 'large'
         }]}
     }
     render() {
         return (
             <div className='directory'>
                 {
-                    this.state.sec.map(({title, id, background}) => {
-                        return <MenuItem key={id} title={title} background={background}/>;
+                    this.state.sec.map(({id, ...otherProps}) => {
+                        return <MenuItem key={id} {...otherProps}/>;
                     })
                 }
             </div>

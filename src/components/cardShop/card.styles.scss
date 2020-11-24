@@ -1,0 +1,30 @@
+.cardShop {
+    height: 320px;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    &:hover {
+        cursor: pointer;
+        & .card-image {
+            opacity: .8;
+        }
+    }
+}
+.card-image {
+    height: 95%;
+    background-size: contain;                       
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.item-footer {
+    display: flex;
+    height: 5%;
+    justify-content: space-between;
+    & .title {
+        font-weight: bold;
+    }
+    & .price {
+        font-weight: lighter;
+    }
+}
