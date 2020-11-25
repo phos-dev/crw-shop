@@ -4,9 +4,6 @@ import Directory from '../../components/directory/directory.component';
 const Homepage = (props) => {
     return (
         <div className='homepage'>
-            <div onClick={()=>{
-                props.history.push('/shop')
-            }}>NAVBAR</div>
             <Directory/>
         </div>
     );
