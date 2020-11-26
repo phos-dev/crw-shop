@@ -1,7 +1,8 @@
 import React from 'react';
 import SignIn from '../../components/signIn/signIn.component'
+import './auth.styles.scss';
 const Register_Login = () => (
-    <div>
+    <div className='authScreen'>
         <SignIn/>
     </div>
 );
