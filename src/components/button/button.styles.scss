@@ -1,0 +1,21 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;  
+    width: 300px;
+    border: 1px black solid; 
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    &:hover {
+        background-color: #CCDBDC;
+    }
+    
+    .google {
+        margin-right: 5px;
+        position: relative;
+        transition: 300ms ease all;
+    }
+}
