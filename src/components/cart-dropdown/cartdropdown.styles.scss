@@ -1,0 +1,21 @@
+.cartdropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 70px;
+    top: 85px;
+    width: 200px;
+    height: 400px;
+    background-color: green;
+    z-index: 3;
+    align-items: center;
+    .items {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        width: 80%;
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+}

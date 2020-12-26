@@ -36,7 +36,7 @@ class SignIn extends Component {
                     label='Email'
                     required
                     onChange={this.handleChangue}
-                    ></FormInput>
+                    />
 
                     <FormInput 
                     name='password'
@@ -46,7 +46,7 @@ class SignIn extends Component {
                     value={this.state.password}
                     required
                     onChange={this.handleChangue}
-                    ></FormInput>
+                    />
                     
                     <div className='submit'>
                         <Button onClick={signInWithGoogle}>ENTRAR</Button>
