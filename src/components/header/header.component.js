@@ -5,8 +5,9 @@ import {signOut} from '../../firebase/firebase.utils';
 import './header.styles.scss';
 import { connect } from 'react-redux';
 import CartComponent from '../cart/cart.component';
+import CartDropdown from '../cart-dropdown/cartdropdown.component';
 
-const Header = ({currentUser}) => (
+const Header = ({currentUser, hidden}) => (
     <div className='header'>
         <Link to='/'>
             <Logo className='logo'/>
@@ -27,11 +28,17 @@ const Header = ({currentUser}) => (
             <Link to='/shop'>
                 SHOP
             </Link>
+            
             <CartComponent qtd={99}/>
+            {
+                hidden ? null :
+                <CartDropdown/>
+            }
         </div>
     </div>
 );
 const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    hidden: state.store.hidden
 });
 export default connect(mapStateToProps)(Header);

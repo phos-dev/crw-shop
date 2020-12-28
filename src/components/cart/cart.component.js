@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {ReactComponent as Cart} from '../../assets/cart/cart.svg';
+import { toggle_cart_dropdown } from '../../redux/cart.actions';
 import './cart.styles.scss';
-const CartComponent = ({qtd}) => {
+const CartComponent = ({qtd, toggle_dropdown}) => {
     return(
-        <div className='cart'>
+        <div className='cart' onClick={toggle_dropdown}>
             <span>
                 {
                     (qtd > 99)
@@ -17,7 +19,11 @@ const CartComponent = ({qtd}) => {
         </div>
     );
 }
-CartComponent.defaultProps = {
-    qtd: 0
-}
-export default CartComponent;
+
+const mapDispatchToProps = dispatch => ({
+    toggle_dropdown: () => dispatch(toggle_cart_dropdown())
+})
+const mapStateToProps = state => ({
+    qtd: state.store.quantity
+})
+export default connect(mapStateToProps, mapDispatchToProps)(CartComponent);

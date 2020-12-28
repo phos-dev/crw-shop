@@ -8,7 +8,6 @@ import Register_Login from './pages/Register_and_signIn/register_signIn';
 import {auth, createProfile} from './firebase/firebase.utils';
 import {setUser} from './redux/user.actions';
 import {connect} from 'react-redux';
-import CartDropdown from './components/cart-dropdown/cartdropdown.component';
 
 class App extends Component{
   unsubscribeFromAuth = null
@@ -32,7 +31,6 @@ class App extends Component{
     return (
       <div className="App">
         <Header/>
-        <CartDropdown/>
         <Switch>
           <Route exact path='/' component={Homepage}/>
           <Route path='/shop' component={Shop}/>

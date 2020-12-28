@@ -6,8 +6,8 @@ const ItemPreview = ({title, items}) => (
         <h1>{title}</h1>
         <div className='items-list'>
             {
-                items.map(({id, ...otherProps}) => (
-                    <CardShop key={id} {...otherProps}/>
+                items.map(item => (
+                    <CardShop key={item.id} item={item}/>
                 ))
             }
         </div>

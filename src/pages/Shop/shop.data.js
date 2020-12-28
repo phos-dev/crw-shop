@@ -22,12 +22,22 @@ const shop_data = [
         title: 'Mechanical',
         items: [
             {
-                id: 1,
+                id: 3,
                 title: 'Rekt',
                 imageURL: 'https://images-na.ssl-images-amazon.com/images/I/6109ZIpDgeL._AC_UX679_.jpg',
                 price: 13212.95
             }
         ]
+    }
+]
+const items = [
+    {
+        id: 1,
+        name: 'Smartwatch no-brand',
+        imageUrl: 'https://static.netshoes.com.br/produtos/relogio-smartwatch-fitgear-fusion/06/NTX-0004-006/NTX-0004-006_zoom1.jpg?ims=544x',
+        aditionalInfo: {
+            color: 'black'
+        }
     }
 ]
 export default shop_data;
