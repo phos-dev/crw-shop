@@ -40,7 +40,7 @@ const CartItem = ({id, title, quantity, price, aditionalInfo, imageURL, decrease
                     }
                 </div>
                 <div className='info'>
-                    <div className='value'>R${Math.abs((quantity * price).toFixed(2))}</div>
+                    <div className='value'>R${(quantity * price).toFixed(2).replace('-0', '0')}</div>
                     <div className='options'>
                         <Button onClick={() => add({id, price})}>+</Button>
                         <div>{quantity}</div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {ReactComponent as Cart} from '../../assets/cart/cart.svg';
 import { toggle_cart_dropdown } from '../../redux/cart.actions';
+import { countCartItems } from '../../redux/cart.selectors';
 import './cart.styles.scss';
 const CartComponent = ({qtd, toggle_dropdown}) => {
     return(
@@ -24,6 +25,6 @@ const mapDispatchToProps = dispatch => ({
     toggle_dropdown: () => dispatch(toggle_cart_dropdown())
 })
 const mapStateToProps = state => ({
-    qtd: state.store.quantity
+    qtd: countCartItems(state)
 })
 export default connect(mapStateToProps, mapDispatchToProps)(CartComponent);
