@@ -1,0 +1,39 @@
+.checkout-item {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    padding-bottom: 50px;
+    &:not(:last-child) {
+        border-bottom: 1px black solid;
+    }
+    .detail {
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+        .title {
+            display: flex;
+            font-weight: bold;
+            font-size: 23px;
+            justify-content: space-between;
+        }
+        .description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 15px;
+        }
+    }
+    .quantity {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .checkout-item-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .quantity > div:hover, .remove:hover {
+        cursor: pointer;
+    }
+}
