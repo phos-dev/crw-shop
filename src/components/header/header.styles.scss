@@ -1,24 +1,24 @@
 .header {
-    margin: 0px;
-    display: flex;
-    justify-content: space-between;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
 }
 .headerItems {
-    width: 22%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 0px 90px;
-    gap: 20px;
-    & a:hover {
-        opacity: .4;
-    }
-    & a{
-        font-weight: bold;
-        font-size: 22px;
-    }
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0px 90px;
+  gap: 20px;
+  & a:hover {
+    opacity: 0.4;
+  }
+  & a {
+    font-weight: bold;
+    font-size: 22px;
+  }
 }
 .logo {
-    height: 100px;
-    width: 100%;
+  height: 100px;
+  width: 100%;
 }

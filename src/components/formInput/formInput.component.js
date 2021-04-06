@@ -1,24 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './formInput.styles.scss';
-const FormInput = ({label, handleChange, ...props}) => {
-    const [focus, setFocus] = useState(true);
-    return(
+const FormInput = ({ label, handleChange, ...props }) => {
+  const [focus, setFocus] = useState(false);
+  return (
     <div className='group'>
-        
-        
-        {
-            (label) 
-            ?
-            (
-                <label className={`${(props.value.length || false) ? 'move' : ''} inputLabel`}>
-                    {label}
-                </label>
-            )
-            : 
-            null
-        }
-        <input className='formInput' onChange={handleChange} {...props} onFocus={() => setFocus(true)} onBlur={() => setFocus(false)}></input>
-        
+      <input
+        className='formInput'
+        onChange={handleChange}
+        {...props}
+        onFocus={() => setFocus(true)}
+        onBlur={() => setFocus(false)}
+      />
+      {label ? (
+        <label
+          className={`${props.value.length || focus ? 'move' : ''} inputLabel`}
+        >
+          {label}
+        </label>
+      ) : null}
     </div>
-)}
-export default FormInput; 
+  );
+};
+export default FormInput;

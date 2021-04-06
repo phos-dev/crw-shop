@@ -1,33 +1,40 @@
 @mixin shrinkLabel {
-    top: -14px;
-    font-size: 12px;
-    color: black;
+  top: -14px;
+  font-size: 12px;
+  color: black;
 }
 .group {
-    position: relative;
-    justify-content: center;
-    .formInput {
-        border: none;
-        border-bottom: 1px solid gray;
-        width: 100%;
-        padding: 10px 5px;
-        &:focus {
-            outline: none;
-        }
-        box-shadow: 0 0 0 30px white inset;
+  position: relative;
+  justify-content: center;
+
+  .formInput {
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    padding: 10px 5px;
+    &:focus {
+      outline: none;
     }
-    .inputLabel {
-        color: gray;
-        position: absolute;
-        pointer-events: none;
-        transition: 300ms ease all;
-        top: 5px;
-        left: 5px;
-        &:focus {
-            @include shrinkLabel(); 
-        }
+    box-shadow: 0 0 0 30px white inset;
+  }
+
+  .formInput:-webkit-autofill ~ label {
+    @include shrinkLabel();
+  }
+
+  .inputLabel {
+    color: gray;
+    position: absolute;
+    pointer-events: none;
+    transition: 300ms ease all;
+    top: 5px;
+    left: 5px;
+    &:focus {
+      @include shrinkLabel();
     }
-    .move {
-        @include shrinkLabel();
-    }
+  }
+
+  .move {
+    @include shrinkLabel();
+  }
 }

@@ -1,48 +1,52 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import MenuItem from '../item/MenuItem';
 import './directory.styles.scss';
 class Directory extends Component {
-    constructor() {
-        super();
-        this.state = {
-        sec: [{
-            id: 1,
-            title: 'SMARTWATCHES',
-            background: 'https://wallpaperaccess.com/full/2067364.jpg'
-        }, 
+  constructor() {
+    super();
+    this.state = {
+      sec: [
         {
-            id: 2,
-            title: 'QUARTZ',
-            background: 'https://cdn.improb.com/wp-content/uploads/2019/11/Best-Quartz-Watches.jpg'
+          id: 1,
+          title: 'SMARTWATCHES',
+          background: 'https://wallpaperaccess.com/full/2067364.jpg'
         },
         {
-            id: 3,
-            title: 'MECÂNICOS',
-            background: 'https://c4.wallpaperflare.com/wallpaper/276/910/406/clocks-watch-ulysse-nardin-wallpaper-preview.jpg'
-        }, 
-        {
-            id: 4,
-            title: 'ESPORTIVOS',
-            background: 'https://images3.alphacoders.com/100/1003359.jpg',
-            size: 'large'
+          id: 2,
+          title: 'QUARTZ',
+          background:
+            'https://cdn.improb.com/wp-content/uploads/2019/11/Best-Quartz-Watches.jpg'
         },
         {
-            id: 5,
-            title: 'DIGITAIS',
-            background: 'https://cdn.hiconsumption.com/wp-content/uploads/2020/06/Best-Digital-Watches-0-Hero.jpg',
-            size: 'large'
-        }]}
-    }
-    render() {
-        return (
-            <div className='directory'>
-                {
-                    this.state.sec.map(({id, ...otherProps}) => {
-                        return <MenuItem key={id} {...otherProps}/>;
-                    })
-                }
-            </div>
-        );
-    }
+          id: 3,
+          title: 'MECÂNICOS',
+          background:
+            'https://c4.wallpaperflare.com/wallpaper/276/910/406/clocks-watch-ulysse-nardin-wallpaper-preview.jpg'
+        },
+        {
+          id: 4,
+          title: 'ESPORTIVOS',
+          background: 'https://images3.alphacoders.com/100/1003359.jpg',
+          size: 'large'
+        },
+        {
+          id: 5,
+          title: 'DIGITAIS',
+          background:
+            'https://cdn.hiconsumption.com/wp-content/uploads/2020/06/Best-Digital-Watches-0-Hero.jpg',
+          size: 'large'
+        }
+      ]
+    };
+  }
+  render() {
+    return (
+      <div className='directory'>
+        {this.state.sec.map(({ id, ...otherProps }) => {
+          return <MenuItem key={id} {...otherProps} />;
+        })}
+      </div>
+    );
+  }
 }
 export default Directory;
